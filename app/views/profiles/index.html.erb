@@ -1,0 +1,45 @@
+<div class="row">
+  <h3 class="">Marketplace</h3>
+</div>
+<hr />
+
+<% @profiles.each_slice(4) do |profiles| %>
+<% next if profiles.size < 4%>
+  <div class="card-deck">
+    <% profiles.each do |profile| %>
+      <div class="card bg-default" >
+        <img class="card-img-top " src="<%= profile.picture_url %>" alt="Card image">
+        <div class="card-body ">
+          <h5 class="card-title text-center"><%= profile.full_name %></h5>
+          <h6 class="card-text text-secondary"><%= profile.title %></h6>
+          <p class="card-text text-dark" style="font-size: 10pt"><%= truncate(profile.bio, length: 50) %><a href="#" class="">see more</a></p>
+          <p class="card-text">
+            <%= link_to  "View Profile", profile, remote: true, class:"btn btn-primary btn-sm"%>
+            <span class="col-sm-1 "> $<%= profile.cost %>0/hr</span>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <br />
+<% end %>
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+
+  <div class="modal-dialog  modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+
+      <!-- Modal Header modal-dialog-scrollable-->
+      <div class="modal-header" style="padding: 0; border:none;">
+        <button type="button" class="close"style="margin-right: 0px;"  data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body profile-view">
+        <!-- Dynamic user content -->
+      </div>
+    </div>
+  </div>
+</div>

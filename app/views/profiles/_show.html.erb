@@ -1,0 +1,73 @@
+
+ <div class="card" style="padding: 20px">
+  <img class="rounded mx-auto d-block" width="15%" src="<%= @profile.picture_url %>" alt="Card image" >
+  <div class="card-body">
+    <h5 class="card-title text-center"><%= @profile.full_name %></h5>
+      <h6 class="card-title text-center"> $<%= @profile.cost %>0/hr</h6>
+    <h6 class="card-text text-center text-secondary"><%= @profile.title %></h6>
+  </div>
+  <p class="card-text mx-auto d-block">
+    <a href="#" class="btn btn-primary">Interview</a>
+    <a href="#" class="btn btn-outline-primary">Send Offer</a>
+  </p>
+</div>
+<br />
+<div class="card">
+  <div class="card-header">
+    Bio
+  </div>
+  <div class="card-body">
+      <p><%=simple_format @profile.bio %></p>
+  </div>
+</div>
+<br />
+
+<div class="card">
+  <div class="card-header">
+    Skills
+  </div>
+  <div class="card-body">
+      <p><%= @profile.skills %></p>
+  </div>
+</div>
+
+<br />
+<div class="card">
+  <div class="card-header">
+    Industry Expertise
+  </div>
+  <div class="card-body">
+      <p><%= @profile.industry_expertise %></p>
+  </div>
+</div>
+<br />
+
+<div class="card">
+  <div class="card-header">
+    Languages
+  </div>
+  <div class="card-body">
+      <p><%= @profile.languages %></p>
+  </div>
+</div>
+
+<br />
+
+<div class="card">
+  <div class="card-header">
+    Availability
+  </div>
+  <div class="card-body">
+      <p></p>
+  </div>
+</div>
+<br />
+
+<div class="card">
+  <div class="card-header">
+    Work History
+  </div>
+  <div class="card-body">
+      <p></p>
+  </div>
+</div>

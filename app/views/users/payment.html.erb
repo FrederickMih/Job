@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-lg-3 offset-2">
+    <ul class="list-group">
+      <li class="list-group-item "><%= link_to "User Settings", edit_user_registration_path %> </li>
+      <li class="list-group-item active">Billing & Payment</li>
+    </ul>
+  </div>
+  <div class="col-lg-6">
+  <div class="card">
+    <div class="card-body">
+      <h4>Balance & Payment</h4>
+      <hr />
+        <p> Current Balance: $ <%= @user.payment&.current_balance.to_f %>0 </p>
+      <%= form_for @user do |f| %>
+        <h5>Payment Method</h5>
+        <hr />
+        <%= f.fields_for :payment do |pay| %>
+          <div class="field">
+            <%= pay.label :card_number %><br />
+            <%= pay.text_field :card_number, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= pay.label :card_name %><br />
+            <%= pay.text_field :card_name, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= pay.label :valid_month %><br />
+            <%= pay.text_field :valid_month, class: "form-control" %>
+          </div>
+          <div class="field">
+            <%= pay.label :valid_year %><br />
+            <%= pay.text_field :valid_year, class: "form-control" %>
+          </div>
+
+        <% end %>
+        <br />
+        <br />
+        <h5>Billing informations</h5>
+        <hr />
+        <%= f.fields_for :address do |add| %>
+          <% %i[company first_name last_name street_address apartment city state postal_code country].each do |field| %>
+            <div class="field">
+              <%= add.label field %><br />
+              <%= add.text_field field, class: "form-control" %>
+            </div>
+          <% end %>
+        <% end %>
+        <br />
+        <div class="actions">
+          <%= f.submit "Save", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

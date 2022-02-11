@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IlanceitPass</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="shell">
+        <div class="header__inner">
+          ILANCEIT OVERPASS
+          <%
+=begin%>
+ <a href="/" class="logo">
+            <img src="logo.png" alt=""> OVERPASS
+          </a> 
+<%
+=end%>
+
+          <a href="#" class="nav-trigger visible-sm-inline-block visible-xs-inline-block">
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+          </a>
+
+          <div class="header__content">
+            <nav class="nav">
+              <ul>
+                <li>
+                  <a href="#features.html">Features</a>
+                </li>
+
+                <li>
+                  <a href="#pricing.html">Pricing</a>
+                </li>
+
+                <li>
+                    <a href="#about.html">About</a>
+                </li>
+
+                <li>
+                  <a href="#careers.html">Careers</a>
+                </li>
+
+                <li class="nav__link-enhanced">
+                  <a href="/users/sign_in">Login</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /.nav -->
+
+            <div class="header__actions">
+              <a href="/agents" class="btn btn--transparent">Become an agent</a>
+            </div>
+            <!-- /.header__actions -->
+          </div>
+          <!-- /.header__content -->
+        </div>
+        <!-- /.header__inner -->
+      </div>
+      <!-- /.shell -->
+    </header>
+    <!-- /.header -->
+
+    <main class="main" id="<%= controller_name %>">
+      <%= yield %>
+    </main>
+
+    <footer class="footer">
+      ILANCEIT OVERPASS
+      <br /><br /><br />
+      <%
+=begin%>
+ <a href="/" class="logo">
+        <img src="css/images/logo-blue.png" alt="Overpass Logo"> OVERPASS
+      </a> 
+<%
+=end%>
+
+      <nav class="footer__nav hidden-xs">
+        <div class="shell">
+          <ul>
+
+            <li>
+              <a href="#features.html">Features</a>
+            </li>
+
+            <li>
+              <a href="#pricing.html">Pricing</a>
+            </li>
+
+            <li>
+              <a href="#about.html">About</a>
+            </li>
+
+            <li>
+              <a href="#careers.html">Careers</a>
+            </li>
+
+            <li>
+              <a href="#">Blog</a>
+            </li>
+
+            <li>
+              <a href="#reach.html">Reach</a>
+            </li>
+
+            <li>
+              <a href="#">Login</a>
+            </li>
+
+            <li>
+              <a href="agents.html">Become an Agent</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.shell -->
+      </nav>
+      <!-- /.footer__nav -->
+
+      <nav class="footer__nav-mobile visible-xs-block">
+        <div class="shell">
+          <ul>
+
+            <li>
+              <a href="#features.html">Features</a>
+            </li>
+
+            <li>
+              <a href="#pricing.html">Pricing</a>
+            </li>
+
+            <li>
+              <a href="#about.html">About</a>
+            </li>
+
+            <li>
+              <a href="#careers.html">Careers</a>
+            </li>
+
+            <li>
+              <a href="#">Blog</a>
+            </li>
+
+            <li>
+              <a href="#reach.html">Reach</a>
+            </li>
+
+            <li>
+              <a href="#">Login</a>
+            </li>
+
+            <li>
+              <a href="/agents">Become an Agent</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.shell -->
+      </nav>
+      <!-- /.footer__nav-mobile -->
+
+      <div class="footer__separation-bar"></div>
+
+      <nav class="footer__nav hidden-xs">
+        <div class="shell">
+          <ul>
+
+            <li>
+              <a target="_blank" href="#">Lead Generation</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Cold Calling</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Sales</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Telemarketing</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Appointment setting</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.shell -->
+      </nav>
+      <!-- /.footer__nav -->
+
+      <nav class="footer__nav-mobile visible-xs-block">
+        <div class="shell">
+          <ul>
+
+            <li>
+              <a target="_blank" href="#">Lead Generation</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Cold Calling</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Sales</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Telemarketing</a>
+            </li>
+
+            <li>
+              <a target="_blank" href="#">Appointment setting</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.shell -->
+      </nav>
+
+      <div class="footer__entry">
+        <div class="shell">
+        </div>
+        <!-- /.shell -->
+      </div>
+      <!-- /.footer__entry -->
+
+      <div class="socials">
+        <span class="socials__label">Follow Us</span>
+
+        <ul>
+          <li>
+            <a target="_blank" href="#">
+              <img src="/css/images/facebook-f.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" href="#">
+              <img src="/css/images/linkedin.svg" />
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" href="#">
+              <img src="/css/images/twitter.svg" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.socials -->
+      <div class="footer__copyright">
+        <div class="shell">
+          <span>
+            &copy; IlanceIT Overpass 2019
+          </span>
+        </div>
+        <!-- /.shell -->
+      </div>
+      <!-- /.footer__copyright -->
+    </footer>
+    <!-- /.footer -->
+  </div>
+  <!-- /.wrapper -->
+</body>
+</html>

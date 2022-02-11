@@ -1,0 +1,16 @@
+<h1> <%= action_name.capitalize%> Campaign </h1>
+<hr>
+
+<div class="card">
+  <h5 class="card-header">Campaign Details</h5>
+  <div class="card-body">
+    <%= simple_nested_form_for(campaign) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :caller_number %>
+      <%= f.input :start_date, as: :date %>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
+
+
